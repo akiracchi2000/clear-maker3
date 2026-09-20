@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clear Maker 3 - Student Support</title>
+    <link rel="stylesheet" href="style.css?v=3.1.6">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <!-- Markdown Parser -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <!-- KaTeX for Math rendering -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+        integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"
+        integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8"
+        crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+        integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05"
+        crossorigin="anonymous"></script>
+
+    <!-- TikZJax for TikZ rendering -->
+    <link rel="stylesheet" type="text/css" href="https://tikzjax.com/v1/fonts.css">
+    <script src="https://tikzjax.com/v1/tikzjax.js"></script>
+
+    <!-- html2canvas -->
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+
+    <!-- PDF.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+    <script>pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js';</script>
+    <link rel="manifest" href="manifest.json?v=3.1.6">
+    <meta name="theme-color" content="#0f172a">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Clear Maker 3">
+    <link rel="icon" type="image/png" href="icon-192.png?v=3.1.6">
+    <link rel="apple-touch-icon" href="icon-192.png?v=3.1.6">
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw.js?v=3.1.6')
+                    .then(registration => {
+                        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+
+                        // 更新が見つかった場合の処理
+                        registration.addEventListener('updatefound', () => {
+                            const newWorker = registration.installing;
+                            newWorker.addEventListener('statechange', () => {
+                                if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                                    // 新しいバージョンがインストールされ、待機中
+                                    // sw.jsのskipWaiting()によりすぐにactivateされるはずだが、念のためログ出力
+                                    console.log('New content is available; please refresh.');
+                                }
+                            });
+                        });
+                    })
+                    .catch(err => {
+                        console.log('ServiceWorker registration failed: ', err);
+                    });
+
+                // 新しいService Workerがコントロールを開始したらページをリロード
+                let refreshing = false;
+                navigator.serviceWorker.addEventListener('controllerchange', () => {
+                    if (!refreshing) {
+                        refreshing = true;
+                        window.location.reload();
+                    }
+                });
+            });
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="app-container">
+        <!-- Overlay for Drag & Drop -->
+        <div id="drop-overlay" class="hidden">
+            <div class="drop-message">
+                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                    <polyline points="17 8 12 3 7 8" />
+                    <line x1="12" y1="3" x2="12" y2="15" />
+                </svg>
+                <p>ここにファイルをドロップして解析開始</p>
+            </div>
+        </div>
+
+        <!-- Settings Modal -->
+        <div id="settings-modal" class="modal hidden">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>設定</h2>
+                    <button id="close-settings" class="icon-btn">&times;</button>
+                </div>
+
+                <button id="open-readme-btn" class="secondary-btn" style="width: 100%; margin-bottom: 1rem;">📖
+                    使い方・更新履歴を見る</button>
+                <hr style="margin: 0 0 1rem 0; opacity: 0.2;">
+
+                <div class="setting-group">
+                    <div class="form-group">
+                        <label for="api-key">Gemini API Key</label>
+                        <input type="password" id="api-key" placeholder="Enter your Gemini API Key">
+                    </div>
+                    <div class="form-group">
+                        <label for="model-select">Model</label>
+                        <select id="model-select">
+                            <option value="gemini-3-flash-preview">Gemini 3 Flash</option>
+                            <option value="gemini-3.7-flash">Gemini 3.7 Flash</option>
+                            <option value="gemini-3.1-pro-preview">Gemini 3.1 Pro</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="setting-group" style="margin-top: 1rem;">
+                    <label class="checkbox-label" style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                        <input type="checkbox" id="show-confidence">
+                        AI確信度を表示する
+                    </label>
+                    <p style="font-size: 0.8rem; color: var(--text-secondary); margin: 4px 0 0 26px;">
+                        OFFにすると回答末尾の確信度表示が非表示になります
+                    </p>
+                </div>
+                <div class="setting-group" style="margin-top: 0.5rem;">
+                    <label class="checkbox-label" style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                        <input type="checkbox" id="auto-retry">
+                        確信度が低い場合に自動で再検証する
+                    </label>
+                    <p style="font-size: 0.8rem; color: var(--text-secondary); margin: 4px 0 0 26px;">
+                        ONにすると確信度90%未満の場合に自動で再生成し解を比較します（APIコスト最大2倍）
+                    </p>
+                </div>
+                <div class="setting-group" style="margin-top: 0.5rem;">
+                    <label class="checkbox-label" style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                        <input type="checkbox" id="enable-markers">
+                        添削画像に修正点の印（赤ペンなど）を描画する
+                    </label>
+                    <p style="font-size: 0.8rem; color: var(--text-secondary); margin: 4px 0 0 26px;">
+                        ONにすると、生徒の画像上のミス箇所にAIが自動で印を描画して出力します
+                    </p>
+                </div>
+                <button id="save-settings" class="primary-btn">保存</button>
+
+            </div>
+        </div>
+
+        <!-- Paste Selection Modal -->
+        <div id="paste-modal" class="modal hidden">
+            <div class="modal-content" style="max-width: 500px;">
+                <div class="modal-header">
+                    <h2>画像を貼り付け</h2>
+                    <button id="close-paste-modal" class="icon-btn">&times;</button>
+                </div>
+                <p style="margin-bottom: 20px; color: var(--text-secondary);">貼り付け先のフォルダを選択してください</p>
+
+                <div class="paste-options" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px;">
+                    <button class="paste-option-btn secondary-btn" data-target="question">
+                        <span style="font-size: 2rem; display: block; margin-bottom: 8px;">❓</span>
+                        問題
+                    </button>
+                    <button class="paste-option-btn secondary-btn" data-target="model">
+                        <span style="font-size: 2rem; display: block; margin-bottom: 8px;">💡</span>
+                        模範解答
+                    </button>
+                    <button class="paste-option-btn secondary-btn" data-target="student">
+                        <span style="font-size: 2rem; display: block; margin-bottom: 8px;">✏️</span>
+                        生徒の解答
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Left Panel: Controls & Prompts -->
+        <section class="left-panel">
+            <header>
+                <div class="branding">
+                    <div class="logo">Clear Maker 3</div>
+                    <span class="version-tag">v3.1.6</span>
+                </div>
+                <div class="header-actions" style="display: flex; gap: 8px;">
+                    <button id="pwa-install-btn" class="icon-btn hidden" title="アプリを端末にインストール">📲</button>
+                    <button id="theme-toggle" class="icon-btn" title="テーマ切り替え">🌙</button>
+                    <button id="open-settings" class="icon-btn" title="設定">⚙️</button>
+                </div>
+            </header>
+
+            <div class="control-group">
+                <label for="subject-select">科目選択</label>
+                <select id="subject-select">
+                    <option value="math">数学</option>
+                    <option value="english">英語</option>
+                    <option value="science">理科</option>
+                    <option value="social">社会</option>
+                    <option value="japanese">国語</option>
+                    <option value="other" selected>その他</option>
+                </select>
+            </div>
+
+
+            <div class="control-group">
+                <label for="user-prompt">追加プロンプト</label>
+                <textarea id="user-prompt" rows="8"
+                    placeholder="ここに入力された指示や質問への回答を作成します...&#10;【図形の描画が必要な場合は、こちらに「図形（グラフ）も描いて」と明確に指示してください】"></textarea>
+            </div>
+
+            <!-- Moved to Right Panel -->
+
+            <div class="status-bar">
+                <span id="file-status">入力: なし</span>
+            </div>
+
+            <div class="control-group" style="margin-top: auto; padding-top: 20px;">
+                <button id="generate-btn" class="primary-btn large-btn" disabled>✨ 解析を実行</button>
+            </div>
+        </section>
+
+        <div class="panel right-panel">
+            <!-- Top Drop Zones -->
+            <div class="top-drop-zones">
+                <!-- Question (問題) Zone -->
+                <div class="control-group drop-zone-group" data-type="question">
+                    <div class="zone-header">
+                        <label>問題</label>
+                        <div class="zone-controls" style="display: flex; align-items: center; gap: 8px;">
+                            <label class="checkbox-label" title="生成結果に元の画像を表示します"
+                                style="font-size: 0.9rem; cursor: pointer; display: flex; align-items: center; gap: 4px; font-weight: normal;">
+                                <input type="checkbox" id="include-question" checked> 画像を引用
+                            </label>
+                            <button class="clear-zone-btn icon-btn-small" title="クリア">🗑️</button>
+                        </div>
+                    </div>
+                    <input type="file" id="file-input-question" accept="image/*,application/pdf,text/plain,text/markdown,text/x-tex,text/html,.tex,.txt,.md,.markdown,.html,.htm" multiple
+                        class="hidden">
+                    <div id="drop-zone-question" class="drop-area">
+                        <p>画像・PDF・ソースファイルを選択<br>または，ここに問題をドロップ</p>
+                    </div>
+                    <div id="thumbnails-question" class="thumbnail-container-mini hidden"></div>
+                    <textarea id="source-question" class="source-input" rows="5"
+                        placeholder="問題のソースを貼り付け（LaTeX / Markdown / HTML / プレーンテキスト）"></textarea>
+                </div>
+
+                <!-- Model Answer (模範解答) Zone -->
+                <div class="control-group drop-zone-group" data-type="model">
+                    <div class="zone-header">
+                        <label>模範解答</label>
+                        <div class="zone-controls" style="display: flex; align-items: center; gap: 8px;">
+                            <label class="checkbox-label" title="生成結果に元の画像を表示します"
+                                style="font-size: 0.9rem; cursor: pointer; display: flex; align-items: center; gap: 4px; font-weight: normal;">
+                                <input type="checkbox" id="include-model" checked> 画像を引用
+                            </label>
+                            <button class="clear-zone-btn icon-btn-small" title="クリア">🗑️</button>
+                        </div>
+                    </div>
+                    <input type="file" id="file-input-model" accept="image/*,application/pdf,text/plain,text/markdown,text/x-tex,text/html,.tex,.txt,.md,.markdown,.html,.htm" multiple class="hidden">
+                    <div id="drop-zone-model" class="drop-area">
+                        <p>画像・PDF・ソースファイルを選択<br>または，ここに模範解答をドロップ</p>
+                    </div>
+                    <div id="thumbnails-model" class="thumbnail-container-mini hidden"></div>
+                    <textarea id="source-model" class="source-input" rows="5"
+                        placeholder="模範解答のソースを貼り付け（LaTeX / Markdown / HTML / プレーンテキスト）"></textarea>
+                </div>
+
+                <!-- Student Answer (生徒の解答) Zone -->
+                <div class="control-group drop-zone-group" data-type="student">
+                    <div class="zone-header">
+                        <label>生徒の解答</label>
+                        <div class="zone-controls" style="display: flex; align-items: center; gap: 8px;">
+                            <label class="checkbox-label" title="生成結果に元の画像を表示します"
+                                style="font-size: 0.9rem; cursor: pointer; display: flex; align-items: center; gap: 4px; font-weight: normal;">
+                                <input type="checkbox" id="include-student" checked> 画像を引用
+                            </label>
+                            <button class="clear-zone-btn icon-btn-small" title="クリア">🗑️</button>
+                        </div>
+                    </div>
+                    <input type="file" id="file-input-student" accept="image/*,application/pdf" multiple class="hidden">
+                    <div id="drop-zone-student" class="drop-area">
+                        <p>ファイルを選択または，<br>ここに生徒の解答をドロップ</p>
+                    </div>
+                    <div id="thumbnails-student" class="thumbnail-container-mini hidden"></div>
+                    <div id="student-nav" class="student-nav hidden">
+                        <button id="prev-student" class="nav-btn" title="前の生徒">◀ 前の生徒</button>
+                        <span id="student-counter" class="student-counter">1 / 1 枚目</span>
+                        <button id="next-student" class="nav-btn" title="次の生徒">次の生徒 ▶</button>
+                        <button id="merge-student" class="nav-btn merge-btn" title="前の画像とまとめる">➕ 前とまとめる</button>
+                    </div>
+                </div>
+            </div>
+            <div class="response-header">
+                <h2>🤖AIカガワ先生の返答🤖</h2>
+                <div class="response-actions">
+                    <!-- Normal Mode Actions -->
+                    <button id="edit-btn" class="icon-btn hidden" title="編集">✏️</button>
+                    <button id="copy-btn" class="icon-btn hidden" title="コピー">📋</button>
+                    <button id="screenshot-btn" class="icon-btn hidden" title="画像として保存">📷</button>
+
+                    <!-- Edit Mode Actions -->
+                    <div id="edit-actions" class="hidden" style="display: flex; gap: 8px;">
+                        <button id="cancel-edit-btn" class="secondary-btn" title="キャンセル">❌</button>
+                        <button id="save-edit-btn" class="primary-btn" title="保存してプレビュー">💾</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 再検証UI -->
+            <div id="verify-container" class="hidden" style="margin-bottom: 15px; padding: 12px; background: var(--bg-secondary); border-radius: 8px; text-align: center; font-size: 0.95rem; border: 1px solid var(--border-color);">
+                <div id="verify-badge" class="hidden" style="color: #10b981; font-weight: bold; display: flex; align-items: center; justify-content: center; gap: 6px;">
+                    ✅ <span>自動再検証：2回の検証で解答が一致しました</span>
+                </div>
+                <div id="verify-warning" class="hidden" style="color: #f59e0b; font-weight: bold; display: flex; align-items: center; justify-content: center; gap: 12px; flex-wrap: wrap;">
+                    <span>⚠️ 自動再検証：回答に差異がありました（確信度が高い方を表示中）</span>
+                    <button id="alt-response-btn" class="secondary-btn" style="font-size: 0.85rem; padding: 4px 10px;">他の回答を表示</button>
+                </div>
+            </div>
+            <div id="loading-indicator" class="loading hidden">
+                <div class="spinner"></div>
+                <span>Generating response...</span>
+            </div>
+            <div id="response-area" class="response-area">
+                <div class="placeholder-text">ここにAIの回答が表示されます</div>
+            </div>
+            <textarea id="response-editor" class="response-editor hidden" spellcheck="false"
+                placeholder="Markdownを編集..."></textarea>
+        </div>
+    </div>
+
+    <!-- TeX Sauce Maker 連携確認モーダル -->
+    <div id="tex-confirm-modal" class="modal hidden">
+        <div class="modal-content" style="max-width: 480px; text-align: center;">
+            <div class="modal-header">
+                <h2>📐 TeXコード作成</h2>
+                <button id="close-tex-confirm" class="icon-btn">&times;</button>
+            </div>
+            <p style="margin: 16px 0; color: var(--text-secondary); line-height: 1.6;">
+                模範解答例の生成が完了しました。<br>
+                この結果をTeX Sauce Makerに送信して<br>TeXコードを作成しますか？
+            </p>
+            <div style="display: flex; gap: 12px; justify-content: center; margin-top: 20px;">
+                <button id="tex-confirm-cancel" class="secondary-btn" style="min-width: 120px;">閉じる</button>
+                <button id="tex-confirm-ok" class="primary-btn" style="min-width: 120px;">✨ 作成する</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- README Modal -->
+    <div id="readme-modal" class="modal hidden">
+        <div class="modal-content large-modal">
+            <h2 style="display: flex; justify-content: space-between; align-items: center;">
+                <span>使い方・更新履歴</span>
+                <button id="close-readme-btn"
+                    style="background:none; border:none; font-size:1.5rem; cursor:pointer;">&times;</button>
+            </h2>
+            <div id="readme-content" class="markdown-body"
+                style="overflow-y: auto; max-height: 70vh; padding: 1rem; background: var(--bg-secondary); border-radius: 8px;">
+                <!-- Content will be loaded here -->
+                読み込み中...
+            </div>
+            <div class="modal-actions" style="margin-top: 1rem; justify-content: flex-end;">
+                <button class="secondary-btn"
+                    onclick="document.getElementById('readme-modal').classList.add('hidden')">閉じる</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 画像拡大プレビュー用オーバーレイ -->
+    <div id="img-preview-overlay" class="img-preview-overlay hidden">
+        <img id="img-preview-large" src="" alt="拡大プレビュー">
+    </div>
+
+    <script src="app.js?v=3.1.6"></script>
+</body>
+
+</html>
