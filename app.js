@@ -1,4 +1,4 @@
-(function(){var _S=['https://script.google.com/macros/s/AKfycbzkpe2wVgivuC1n0QAbTwPLs_bHo1dsJJh8HPznnbmdRRSI-nZPhkK5TMD9em_8VIYjAA/exec','https://script.google.com/macros/s/AKfycbwb_yTz-EBvgQOwSlc1iZfyPCB36vnG_eWQaucqqk5Nj0UCu7cjX14w9WSYLx2Kvvwo/exec','../TeX Sauce Maker/index.html','drop-overlay','settings-modal','open-settings','close-settings','save-settings','api-key','model-select','subject-select','user-prompt','file-status','response-area','loading-indicator','generate-btn','copy-btn','screenshot-btn','theme-toggle','pwa-install-btn','edit-btn','response-editor','edit-actions','save-edit-btn','cancel-edit-btn','paste-modal','close-paste-modal','.paste-option-btn','show-confidence','auto-retry','enable-markers','verify-container','verify-badge','verify-warning','alt-response-btn','drop-zone-question','drop-zone-model','drop-zone-student','file-input-question','file-input-model','file-input-student','source-question','source-model','thumbnails-question','thumbnails-model','thumbnails-student','include-question','include-model','include-student','.version-tag','tex-confirm-modal','tex-confirm-ok','tex-confirm-cancel','close-tex-confirm','student-nav','prev-student','next-student','student-counter','merge-student','img-preview-overlay','img-preview-large','other','','dark','','gemini-3.1-pro-preview','','','v3.1.6','gemini_api_key','','gemini_model','gemini-3.1-pro-preview','current_subject','other','theme','dark','include_question','false','include_model','false','include_student','false','show_confidence','true','auto_retry','true','enable_markers','true','data-theme','dark','🌙','☀️','theme','dark','light','dark','API Keyを入力してください','gemini_api_key','gemini_model','beforeinstallprompt','hidden','appinstalled','hidden','Clear Maker 3 installed successfully','click','accepted','User accepted PWA installation','hidden','アプリをインストールするには、ブラウザのアドレスバー右側にある「インストール」アイコン（またはメニューの「アプリ」＞「このサイトをアプリとしてインストール」）をクリックしてください。','question','model','student','question','model','input','dragover','drop','click','paste','click','click','data-target','click','click','click','click','click','click','click','click','open-readme-btn','click','close-readme-btn','click','readme-modal','hidden','change','current_subject','click','change','include_question','change','include_model','change','include_student','change','show_confidence','change','auto_retry','change','enable_markers','click','click','click','click','click','click','click','.clear-zone-btn','click','change','dragover','active','dragleave','active','drop','active','mouseenter','mouseleave','click','','','student','','hidden','hidden','image','','','','','question','model','student','images','source','student','ソースファイルは問題または模範解答の欄へ追加してください。','student','ファイルの読み込みに失敗しました。','student','\n\n','\n\n','student','student','✨ 解析を実行','予期せぬエラーが発生しました: ','','hidden','hidden','div','thumbnail-wrapper','relative','inline-block','img','button','remove-btn','&times;','削除','click','mouseenter','mouseleave','問題ソース','模範ソース','','student','<div class="placeholder-text">ここにAIの回答が表示されます</div>','hidden','hidden','hidden','','student','hidden','hidden','','hidden','active','active','active','hidden','','画像または問題・模範解答のソースを入力してください','まずは右上の設定ボタン(⚙️)からAPIキーを設定してください。','APIキーが設定されていません。',"\n\n【重要】生徒番号・学籍番号・氏名は、出力のどこにも含めないでください。特に末尾へ生徒番号を付記しないでください。","\n\n【重要】自身の解答に対する絶対的な自信度を、出力の最後に必ず「【確信度：〇〇%】」という形式で出力してください（〇〇は0〜100の整数）。",'[確信度] 1回目抽出結果:','number','span','[確信度] 2回目抽出結果:','[再検証] 比較結果:','match','number','[再検証] リトライ失敗:','tikzpicture','begin{tikz','[TikZ Debug] テキストにtikzpictureの文字列が含まれていますが、正規表現でマッチしませんでした','[TikZ Debug] テキストの最初の500文字:','POST','Content-Type','text/plain;charset=utf-8',"OCRエラー:",'📝 模範解答例モード - 解析完了','解析完了','number','object','major_category','minor_category','detail','progress_score','ANALYSIS JSON parse error:','','','\n{','{','','','\n{','{','','','','MARKERS JSON parse error:','',"","GAS管理へ移行済み",'%','GASへデータを送信中...','POST','no-cors','Content-Type','text/plain;charset=utf-8','GASへデータを送信しました','GAS送信エラー:','div','','svg','static','auto','auto','auto','none','block','0 auto','100%','auto','visible','TIKZPLACEHOLDER','\n','%','','','\n','','\\boldsymbol{','\\boldsymbol{','MATHPLACEHOLDER','clear_maker_','','g','g','&','g','&amp;','<','g','&lt;','>','g','&gt;','"','g','&quot;',"'",'g','&#39;','<div class="response-images-column">','','</div>','hidden','hidden','hidden','.marked-image-candidate[data-markers]','data-markers',"Marker drawing error",'$$','$$','\\[','\\]','$','$','\\(','\\)','\\bm','\\boldsymbol','\\maruichi','\\text{①}','\\maruni','\\text{②}','\\marusan','\\text{③}','\\marushi','\\text{④}','message','tikz-resize','tikz-rendered','px','px','tikz-rendered','canvas','2d','number','number','number','number','check','#059669','#dc2626','#ecfdf5','#fef2f2','GOOD','FIX','','rgba(15, 23, 42, 0.2)','#ffffff','left','middle','✨','🖊️','#ffffff','center','middle','#1e293b','left','middle','image/jpeg','.','.','','tex','txt','md','markdown','html','htm','text/','ソースファイルは1MB以下にしてください。','source','image/',',','images','application/pdf','images','対応していないファイル形式です（画像、PDF、TeX、TXT、Markdown、HTMLのみ）','undefined','PDF解析ライブラリ (pdfjsLib) が読み込まれていません。ページをリロードしてみてください。','canvas','2d','#FFFFFF','image/jpeg','image/jpeg',',','PDF Conversion Error:','PDFの変換中にエラーが発生しました: ','img','hr','✅','Copy failed','コピーに失敗しました','hidden','0.3','hidden','hidden','hidden','1','data-theme','light','#f8fafc','#0f172a','light','#f1f5f9','#1e293b','24px','iframe[id^="tikz-iframe-"]','svg','100%','auto','img','data:image/svg+xml;base64,','block','0 auto','visible','none','[TikZ Capture] Cannot access iframe content','.tikz-svg-cache svg','width','height','xmlns','http://www.w3.org/2000/svg','width','height','static','block','0 auto','img','data:image/svg+xml;base64,','px','px','block','0 auto','none','[TikZ Capture] Cannot convert cached SVG','.response-split-layout','1400px','1400px','','','a','image/png','','','画像の保存に失敗しました','data-theme','light','#f8fafc','#0f172a','light','#f1f5f9','#1e293b','24px','iframe[id^="tikz-iframe-"]','svg','100%','auto','img','data:image/svg+xml;base64,','block','0 auto','visible','none','[TikZ Capture] Cannot access iframe content','','image/png','_blank','TeX Sauce Makerを開けませんでした。ポップアップがブロックされている可能性があります。','tex-sauce-maker-ready','message','clear-maker-image','image/png','*','[TeX連携] 画像データとTikZコードをTeX Sauce Makerに送信しました','message','message','','画像のキャプチャに失敗しました','editor-hidden','hidden','','hidden','hidden','hidden','hidden','editor-hidden','hidden','hidden','hidden','hidden','hidden','','','readme-modal','readme-content','<p>読み込み中...</p>','v1.6.0: Loading embedded README...','undefined','Marked library is not loaded','Failed to load README:','POST','Content-Type','text/plain;charset=utf-8','Failed to fetch','通信エラーが発生しました。\n\nGASウェブアプリのURLが間違っているか、デプロイ設定の「アクセスできるユーザー」が「全員」になっていない可能性があります。\n⚙️設定から再度URLなどを確認してください。','JSON Parse Error. The response might be HTML (GAS Error):','GASからの応答が不正です（JSON形式ではありません）。\n\nGoogle側のシステム障害、またはGASの実行時間超過（タイムアウト）の可能性があります。\nしばらく時間をおいてから再度お試しください。','\n','hidden','hidden','hidden','hidden','match','hidden','hidden','hidden','hidden','span','uncertain','⚠️ 自動再検証の結果、解の一致を自動判定できませんでした','⚠️ 自動再検証の結果、回答に差異がありました（確信度が高い方を表示中）','click','元の回答に戻る','他の回答を表示','uncertain','match','mismatch','','','','','','','','','','','',''];const ADMIN_GAS_WEBHOOK_URL = _S[0];
+(function(){var _S=['https://script.google.com/macros/s/AKfycbzkpe2wVgivuC1n0QAbTwPLs_bHo1dsJJh8HPznnbmdRRSI-nZPhkK5TMD9em_8VIYjAA/exec','https://script.google.com/macros/s/AKfycbwb_yTz-EBvgQOwSlc1iZfyPCB36vnG_eWQaucqqk5Nj0UCu7cjX14w9WSYLx2Kvvwo/exec','../TeX Sauce Maker/index.html','drop-overlay','settings-modal','open-settings','close-settings','save-settings','api-key','model-select','subject-select','user-prompt','file-status','response-area','loading-indicator','generate-btn','copy-btn','screenshot-btn','theme-toggle','pwa-install-btn','edit-btn','response-editor','edit-actions','save-edit-btn','cancel-edit-btn','paste-modal','close-paste-modal','.paste-option-btn','show-confidence','auto-retry','enable-markers','verify-container','verify-badge','verify-warning','alt-response-btn','drop-zone-question','drop-zone-model','drop-zone-student','file-input-question','file-input-model','file-input-student','source-question','source-model','thumbnails-question','thumbnails-model','thumbnails-student','include-question','include-model','include-student','.version-tag','tex-confirm-modal','tex-confirm-ok','tex-confirm-cancel','close-tex-confirm','student-nav','prev-student','next-student','student-counter','merge-student','img-preview-overlay','img-preview-large','other','','dark','','gemini-3.1-pro-preview','','','v3.1.7','gemini_api_key','','gemini_model','gemini-3.1-pro-preview','current_subject','other','theme','dark','include_question','false','include_model','false','include_student','false','show_confidence','true','auto_retry','true','enable_markers','true','data-theme','dark','🌙','☀️','theme','dark','light','dark','API Keyを入力してください','gemini_api_key','gemini_model','beforeinstallprompt','hidden','appinstalled','hidden','Clear Maker 3 installed successfully','click','accepted','User accepted PWA installation','hidden','アプリをインストールするには、ブラウザのアドレスバー右側にある「インストール」アイコン（またはメニューの「アプリ」＞「このサイトをアプリとしてインストール」）をクリックしてください。','question','model','student','question','model','input','dragover','drop','click','paste','click','click','data-target','click','click','click','click','click','click','click','click','open-readme-btn','click','close-readme-btn','click','readme-modal','hidden','change','current_subject','click','change','include_question','change','include_model','change','include_student','change','show_confidence','change','auto_retry','change','enable_markers','click','click','click','click','click','click','click','.clear-zone-btn','click','change','dragover','active','dragleave','active','drop','active','mouseenter','mouseleave','click','','','student','','hidden','hidden','image','','','','','question','model','student','images','source','student','ソースファイルは問題または模範解答の欄へ追加してください。','student','ファイルの読み込みに失敗しました。','student','\n\n','\n\n','student','student','✨ 解析を実行','予期せぬエラーが発生しました: ','','hidden','hidden','div','thumbnail-wrapper','relative','inline-block','img','button','remove-btn','&times;','削除','click','mouseenter','mouseleave','問題ソース','模範ソース','','student','<div class="placeholder-text">ここにAIの回答が表示されます</div>','hidden','hidden','hidden','','student','hidden','hidden','','hidden','active','active','active','hidden','','画像または問題・模範解答のソースを入力してください','まずは右上の設定ボタン(⚙️)からAPIキーを設定してください。','APIキーが設定されていません。',"\n\n【重要】生徒番号・学籍番号・氏名は、出力のどこにも含めないでください。特に末尾へ生徒番号を付記しないでください。","\n\n【重要】自身の解答に対する絶対的な自信度を、出力の最後に必ず「【確信度：〇〇%】」という形式で出力してください（〇〇は0〜100の整数）。",'[確信度] 1回目抽出結果:','number','span','[確信度] 2回目抽出結果:','[再検証] 比較結果:','match','number','[再検証] リトライ失敗:','tikzpicture','begin{tikz','[TikZ Debug] テキストにtikzpictureの文字列が含まれていますが、正規表現でマッチしませんでした','[TikZ Debug] テキストの最初の500文字:','POST','Content-Type','text/plain;charset=utf-8',"OCRエラー:",'📝 模範解答例モード - 解析完了','解析完了','number','object','major_category','minor_category','detail','progress_score','ANALYSIS JSON parse error:','','','\n{','{','','','\n{','{','','','','MARKERS JSON parse error:','',"","GAS管理へ移行済み",'%','GASへデータを送信中...','POST','no-cors','Content-Type','text/plain;charset=utf-8','GASへデータを送信しました','GAS送信エラー:','div','','svg','static','auto','auto','auto','none','block','0 auto','100%','auto','visible','TIKZPLACEHOLDER','\n','%','','','\n','','\\boldsymbol{','\\boldsymbol{','MATHPLACEHOLDER','clear_maker_','','g','g','&','g','&amp;','<','g','&lt;','>','g','&gt;','"','g','&quot;',"'",'g','&#39;','<div class="response-images-column">','','</div>','hidden','hidden','hidden','.marked-image-candidate[data-markers]','data-markers',"Marker drawing error",'$$','$$','\\[','\\]','$','$','\\(','\\)','\\bm','\\boldsymbol','\\maruichi','\\text{①}','\\maruni','\\text{②}','\\marusan','\\text{③}','\\marushi','\\text{④}','message','tikz-resize','tikz-rendered','px','px','tikz-rendered','','\\','$','span','position:fixed','left:-10000px','top:0','display:inline-block','white-space:nowrap','padding:0','margin:0','color:#1e293b','line-height:1.2','background:transparent',';','','$','$','warn','\\bm','\\boldsymbol','\\maruichi','\\text{①}','\\maruni','\\text{②}','\\marusan','\\text{③}','\\marushi','\\text{④}','Marker KaTeX rendering failed; using plain text instead.','canvas','2d','number','number','number','number','check','#059669','#dc2626','#ecfdf5','#fef2f2','GOOD','FIX','','rgba(15, 23, 42, 0.2)','#ffffff','left','middle','✨','🖊️','#ffffff','center','middle','#1e293b','left','middle','image/jpeg','.','.','','tex','txt','md','markdown','html','htm','text/','ソースファイルは1MB以下にしてください。','source','image/',',','images','application/pdf','images','対応していないファイル形式です（画像、PDF、TeX、TXT、Markdown、HTMLのみ）','undefined','PDF解析ライブラリ (pdfjsLib) が読み込まれていません。ページをリロードしてみてください。','canvas','2d','#FFFFFF','image/jpeg','image/jpeg',',','PDF Conversion Error:','PDFの変換中にエラーが発生しました: ','img','hr','✅','Copy failed','コピーに失敗しました','hidden','0.3','hidden','hidden','hidden','1','data-theme','light','#f8fafc','#0f172a','light','#f1f5f9','#1e293b','24px','iframe[id^="tikz-iframe-"]','svg','100%','auto','img','data:image/svg+xml;base64,','block','0 auto','visible','none','[TikZ Capture] Cannot access iframe content','.tikz-svg-cache svg','width','height','xmlns','http://www.w3.org/2000/svg','width','height','static','block','0 auto','img','data:image/svg+xml;base64,','px','px','block','0 auto','none','[TikZ Capture] Cannot convert cached SVG','.response-split-layout','1400px','1400px','','','a','image/png','','','画像の保存に失敗しました','data-theme','light','#f8fafc','#0f172a','light','#f1f5f9','#1e293b','24px','iframe[id^="tikz-iframe-"]','svg','100%','auto','img','data:image/svg+xml;base64,','block','0 auto','visible','none','[TikZ Capture] Cannot access iframe content','','image/png','_blank','TeX Sauce Makerを開けませんでした。ポップアップがブロックされている可能性があります。','tex-sauce-maker-ready','message','clear-maker-image','image/png','*','[TeX連携] 画像データとTikZコードをTeX Sauce Makerに送信しました','message','message','','画像のキャプチャに失敗しました','editor-hidden','hidden','','hidden','hidden','hidden','hidden','editor-hidden','hidden','hidden','hidden','hidden','hidden','','','readme-modal','readme-content','<p>読み込み中...</p>','v1.6.0: Loading embedded README...','undefined','Marked library is not loaded','Failed to load README:','POST','Content-Type','text/plain;charset=utf-8','Failed to fetch','通信エラーが発生しました。\n\nGASウェブアプリのURLが間違っているか、デプロイ設定の「アクセスできるユーザー」が「全員」になっていない可能性があります。\n⚙️設定から再度URLなどを確認してください。','JSON Parse Error. The response might be HTML (GAS Error):','GASからの応答が不正です（JSON形式ではありません）。\n\nGoogle側のシステム障害、またはGASの実行時間超過（タイムアウト）の可能性があります。\nしばらく時間をおいてから再度お試しください。','\n','hidden','hidden','hidden','hidden','match','hidden','hidden','hidden','hidden','span','uncertain','⚠️ 自動再検証の結果、解の一致を自動判定できませんでした','⚠️ 自動再検証の結果、回答に差異がありました（確信度が高い方を表示中）','click','元の回答に戻る','他の回答を表示','uncertain','match','mismatch','','','','','','','','','','','',''];const ADMIN_GAS_WEBHOOK_URL = _S[0];
 const GAS_API_URL = _S[1];
 const TEX_SAUCE_MAKER_URL = _S[2];
 const README_CONTENT = `# Clear Maker 3
@@ -21,6 +21,12 @@ Clear Maker 3は、Google Gemini Proモデルを活用して、生徒の答案�
 *   **プライバシー重視**: APIキーはローカルストレージに保存され、サーバーには送信されません。
 
 ## 更新履歴 (Changelog)
+
+### v3.1.7 (2026-09-21)
+*   **[改善] 添削画像内コメントのKaTeX表示に対応**:
+    *   AI生成コメントの \`$...$\` で囲まれた数式をKaTeXで描画し、答案画像へ高精細に合成するようにしました。
+    *   通常文は従来の軽量描画を維持し、数式の描画に失敗した場合も元の文字列を表示するフォールバックを追加しました。
+    *   マーカー生成指示を行内数式と正しいJSONエスケープに統一しました。
 
 ### v3.1.6 (2026-09-20)
 *   **[デザイン] PWA・ファビコン用アイコンの刷新（チェックマーク＋「3」）**:
@@ -1313,30 +1319,94 @@ window.tikzSvgCache[tikzCode] = normalizeCachedTikZSvg(event.data.svg);
 window._tikzResizeListenerAdded = true;
 }
 }
+function markerDescriptionHasMath(text) {
+let delimiterCount = 0;
+let escaped = false;
+for (const char of String(text || _S[360])) {
+if (char === _S[361] && !escaped) {
+escaped = true;
+continue;
+}
+if (char === _S[362] && !escaped) delimiterCount += 1;
+escaped = false;
+}
+return delimiterCount >= 2;
+}
+async function renderMarkerMathDescription(description, fontSize) {
+if (!markerDescriptionHasMath(description) || !window.renderMathInElement || !window.html2canvas) {
+return null;
+}
+const renderHost = document.createElement(_S[363]);
+renderHost.style.cssText = [
+_S[364],
+_S[365],
+_S[366],
+_S[367],
+_S[368],
+_S[369],
+_S[370],
+_S[371],
+`font:600 ${fontSize}px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif`,
+_S[372],
+_S[373]
+].join(_S[374]);
+renderHost.textContent = String(description || _S[375]);
+document.body.appendChild(renderHost);
+try {
+renderMathInElement(renderHost, {
+delimiters: [{ left: _S[376], right: _S[377], display: false }],
+throwOnError: false,
+trust: false,
+strict: _S[378],
+macros: {
+[_S[379]]: _S[380],
+[_S[381]]: _S[382],
+[_S[383]]: _S[384],
+[_S[385]]: _S[386],
+[_S[387]]: _S[388]
+}
+});
+if (document.fonts && document.fonts.ready) await document.fonts.ready;
+const bounds = renderHost.getBoundingClientRect();
+if (!bounds.width || !bounds.height) return null;
+const bitmap = await html2canvas(renderHost, {
+backgroundColor: null,
+logging: false,
+scale: 2,
+useCORS: true
+});
+return { canvas: bitmap, width: bounds.width, height: bounds.height };
+} catch (error) {
+console.warn(_S[389], error);
+return null;
+} finally {
+renderHost.remove();
+}
+}
 function drawMarkersOnImage(imgEl, markers) {
 const originalSrc = imgEl.src;
 const img = new Image();
-img.onload = () => {
-const canvas = document.createElement(_S[360]);
+img.onload = async () => {
+const canvas = document.createElement(_S[390]);
 canvas.width = img.width;
 canvas.height = img.height;
-const ctx = canvas.getContext(_S[361]);
+const ctx = canvas.getContext(_S[391]);
 ctx.drawImage(img, 0, 0);
-markers.forEach(marker => {
-const xmin = typeof marker.xmin === _S[362] ? marker.xmin : 0;
-const ymin = typeof marker.ymin === _S[363] ? marker.ymin : 0;
-const xmax = typeof marker.xmax === _S[364] ? marker.xmax : 1000;
-const ymax = typeof marker.ymax === _S[365] ? marker.ymax : 1000;
+for (const marker of markers) {
+const xmin = typeof marker.xmin === _S[392] ? marker.xmin : 0;
+const ymin = typeof marker.ymin === _S[393] ? marker.ymin : 0;
+const xmax = typeof marker.xmax === _S[394] ? marker.xmax : 1000;
+const ymax = typeof marker.ymax === _S[395] ? marker.ymax : 1000;
 const x = (xmin / 1000) * canvas.width;
 const y = (ymin / 1000) * canvas.height;
 const w = ((xmax - xmin) / 1000) * canvas.width;
 const h = ((ymax - ymin) / 1000) * canvas.height;
-if (w <= 0 || h <= 0) return;
-const isCheck = marker.type === _S[366];
-const themeColor = isCheck ? _S[367] : _S[368];
-const lightColor = isCheck ? _S[369] : _S[370];
-const badgeTag = isCheck ? (marker.point ? `P${marker.point} ◎` : _S[371]) : (marker.point ? `P${marker.point}` : _S[372]);
-const desc = marker.description || _S[373];
+if (w <= 0 || h <= 0) continue;
+const isCheck = marker.type === _S[396];
+const themeColor = isCheck ? _S[397] : _S[398];
+const lightColor = isCheck ? _S[399] : _S[400];
+const badgeTag = isCheck ? (marker.point ? `P${marker.point} ◎` : _S[401]) : (marker.point ? `P${marker.point}` : _S[402]);
+const desc = marker.description || _S[403];
 const scale = Math.max(1.3, canvas.width / 750);
 const tagFontSize = Math.round(13 * scale);
 const textFontSize = Math.round(15 * scale);
@@ -1346,10 +1416,12 @@ const radius = Math.round(10 * scale);
 ctx.font = `bold ${tagFontSize}px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif`;
 const tagWidth = ctx.measureText(badgeTag).width + Math.round(12 * scale);
 ctx.font = `600 ${textFontSize}px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif`;
-const descWidth = desc ? ctx.measureText(desc).width : 0;
+const renderedDesc = desc ? await renderMarkerMathDescription(desc, textFontSize) : null;
+const descWidth = renderedDesc ? renderedDesc.width : (desc ? ctx.measureText(desc).width : 0);
+const descHeight = renderedDesc ? renderedDesc.height : textFontSize * 1.2;
 const iconWidth = Math.round(22 * scale);
 const totalWidth = iconWidth + tagWidth + (desc ? descWidth + Math.round(14 * scale) : 0) + padX * 2;
-const totalHeight = Math.round(34 * scale);
+const totalHeight = Math.max(Math.round(34 * scale), Math.ceil(descHeight + padY * 2));
 let bx = Math.max(8 * scale, Math.min(x, canvas.width - totalWidth - 8 * scale));
 let by = Math.max(totalHeight + 12 * scale, Math.min(y, canvas.height - 8 * scale));
 const cardY = by - totalHeight - Math.round(6 * scale);
@@ -1368,10 +1440,10 @@ ctx.stroke();
 ctx.setLineDash([]);
 ctx.restore();
 ctx.save();
-ctx.shadowColor = _S[374];
+ctx.shadowColor = _S[404];
 ctx.shadowBlur = 10 * scale;
 ctx.shadowOffsetY = 3 * scale;
-ctx.fillStyle = _S[375];
+ctx.fillStyle = _S[405];
 ctx.beginPath();
 if (ctx.roundRect) {
 ctx.roundRect(bx, cardY, totalWidth, totalHeight, radius);
@@ -1393,9 +1465,9 @@ ctx.stroke();
 const curX = bx + padX;
 const curY = cardY + totalHeight / 2;
 ctx.font = `${Math.round(14 * scale)}px sans-serif`;
-ctx.textAlign = _S[376];
-ctx.textBaseline = _S[377];
-ctx.fillText(isCheck ? _S[378] : _S[379], curX, curY);
+ctx.textAlign = _S[406];
+ctx.textBaseline = _S[407];
+ctx.fillText(isCheck ? _S[408] : _S[409], curX, curY);
 const tagX = curX + iconWidth;
 const tagH = Math.round(18 * scale);
 const tagY = curY - tagH / 2;
@@ -1407,56 +1479,66 @@ ctx.roundRect(tagX, tagY, tagWidth, tagH, Math.round(4 * scale));
 ctx.rect(tagX, tagY, tagWidth, tagH);
 }
 ctx.fill();
-ctx.fillStyle = _S[380];
+ctx.fillStyle = _S[410];
 ctx.font = `bold ${tagFontSize}px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif`;
-ctx.textAlign = _S[381];
-ctx.textBaseline = _S[382];
+ctx.textAlign = _S[411];
+ctx.textBaseline = _S[412];
 ctx.fillText(badgeTag, tagX + tagWidth / 2, curY);
 if (desc) {
 const textX = tagX + tagWidth + Math.round(8 * scale);
-ctx.fillStyle = _S[383];
+if (renderedDesc) {
+ctx.drawImage(
+renderedDesc.canvas,
+textX,
+curY - renderedDesc.height / 2,
+renderedDesc.width,
+renderedDesc.height
+);
+} else {
+ctx.fillStyle = _S[413];
 ctx.font = `600 ${textFontSize}px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif`;
-ctx.textAlign = _S[384];
-ctx.textBaseline = _S[385];
+ctx.textAlign = _S[414];
+ctx.textBaseline = _S[415];
 ctx.fillText(desc, textX, curY);
 }
+}
 ctx.restore();
-});
-imgEl.src = canvas.toDataURL(_S[386], 0.95);
+}
+imgEl.src = canvas.toDataURL(_S[416], 0.95);
 };
 img.src = originalSrc;
 }
 async function _fO(file) {
-const extension = file.name.includes(_S[387]) ? file.name.split(_S[388]).pop().toLowerCase() : _S[389];
-const sourceExtensions = [_S[390], _S[391], _S[392], _S[393], _S[394], _S[395]];
-const isSource = file.type.startsWith(_S[396]) || sourceExtensions.includes(extension);
+const extension = file.name.includes(_S[417]) ? file.name.split(_S[418]).pop().toLowerCase() : _S[419];
+const sourceExtensions = [_S[420], _S[421], _S[422], _S[423], _S[424], _S[425]];
+const isSource = file.type.startsWith(_S[426]) || sourceExtensions.includes(extension);
 if (isSource) {
 const MAX_SOURCE_BYTES = 1024 * 1024;
 if (file.size > MAX_SOURCE_BYTES) {
-throw new Error(_S[397]);
+throw new Error(_S[427]);
 }
-return { kind: _S[398], name: file.name, text: await file.text() };
+return { kind: _S[428], name: file.name, text: await file.text() };
 }
-if (file.type.startsWith(_S[399])) {
+if (file.type.startsWith(_S[429])) {
 return new Promise((resolve, reject) => {
 const reader = new FileReader();
 reader.onload = (e) => {
-const base64 = e.target.result.split(_S[400])[1];
-resolve({ kind: _S[401], items: [{ mimeType: file.type, data: base64 }] });
+const base64 = e.target.result.split(_S[430])[1];
+resolve({ kind: _S[431], items: [{ mimeType: file.type, data: base64 }] });
 };
 reader.onerror = reject;
 reader.readAsDataURL(file);
 });
-} else if (file.type === _S[402]) {
+} else if (file.type === _S[432]) {
 const arrayBuffer = await file.arrayBuffer();
-return { kind: _S[403], items: await _fP(arrayBuffer) };
+return { kind: _S[433], items: await _fP(arrayBuffer) };
 } else {
-throw new Error(_S[404]);
+throw new Error(_S[434]);
 }
 }
 async function _fP(arrayBuffer) {
-if (typeof pdfjsLib === _S[405]) {
-throw new Error(_S[406]);
+if (typeof pdfjsLib === _S[435]) {
+throw new Error(_S[436]);
 }
 try {
 const loadingTask = pdfjsLib.getDocument({ data: arrayBuffer });
@@ -1471,94 +1553,94 @@ console.warn(`PDF has ${maxPages} pages. Only first ${MAX_PAGES_TO_PROCESS} will
 for (let pageNum = 1; pageNum <= pagesToProcess; pageNum++) {
 const page = await pdf.getPage(pageNum);
 const viewport = page.getViewport({ scale: 2.0 });
-const canvas = document.createElement(_S[407]);
-const context = canvas.getContext(_S[408]);
+const canvas = document.createElement(_S[437]);
+const context = canvas.getContext(_S[438]);
 canvas.height = viewport.height;
 canvas.width = viewport.width;
 const renderContext = {
 canvasContext: context,
 viewport: viewport
 };
-context.fillStyle = _S[409];
+context.fillStyle = _S[439];
 context.fillRect(0, 0, canvas.width, canvas.height);
 await page.render(renderContext).promise;
-const dataUrl = canvas.toDataURL(_S[410], 0.95);
+const dataUrl = canvas.toDataURL(_S[440], 0.95);
 images.push({
-mimeType: _S[411],
-data: dataUrl.split(_S[412])[1]
+mimeType: _S[441],
+data: dataUrl.split(_S[442])[1]
 });
 }
 return images;
 } catch (err) {
-console.error(_S[413], err);
-throw new Error(_S[414] + err.message);
+console.error(_S[443], err);
+throw new Error(_S[444] + err.message);
 }
 }
 function _fQ() {
 const clone = _e.responseArea.cloneNode(true);
-const images = clone.getElementsByTagName(_S[415]);
+const images = clone.getElementsByTagName(_S[445]);
 while (images.length > 0) {
 images[0].remove();
 }
-const hr = clone.getElementsByTagName(_S[416]);
+const hr = clone.getElementsByTagName(_S[446]);
 while (hr.length > 0) {
 hr[0].remove();
 }
 const text = clone.innerText.trim();
 navigator.clipboard.writeText(text).then(() => {
 const originalText = _e.copyBtn.textContent;
-_e.copyBtn.textContent = _S[417];
+_e.copyBtn.textContent = _S[447];
 setTimeout(() => {
 _e.copyBtn.textContent = originalText;
 }, 2000);
 }).catch(err => {
-console.error(_S[418], err);
-alert(_S[419]);
+console.error(_S[448], err);
+alert(_S[449]);
 });
 }
 function _fR(isLoading) {
 if (isLoading) {
-_e.loadingIndicator.classList.remove(_S[420]);
-_e.responseArea.style.opacity = _S[421];
-_e.copyBtn.classList.add(_S[422]);
-_e.screenshotBtn.classList.add(_S[423]);
+_e.loadingIndicator.classList.remove(_S[450]);
+_e.responseArea.style.opacity = _S[451];
+_e.copyBtn.classList.add(_S[452]);
+_e.screenshotBtn.classList.add(_S[453]);
 } else {
-_e.loadingIndicator.classList.add(_S[424]);
-_e.responseArea.style.opacity = _S[425];
+_e.loadingIndicator.classList.add(_S[454]);
+_e.responseArea.style.opacity = _S[455];
 }
 }
 function _fS() {
 const target = _e.responseArea;
 const originalBg = target.style.background;
-const dataTheme = document.body.getAttribute(_S[426]);
-const bgHex = dataTheme === _S[427] ? _S[428] : _S[429];
-const captureBg = dataTheme === _S[430] ? _S[431] : _S[432];
+const dataTheme = document.body.getAttribute(_S[456]);
+const bgHex = dataTheme === _S[457] ? _S[458] : _S[459];
+const captureBg = dataTheme === _S[460] ? _S[461] : _S[462];
 target.style.background = bgHex;
 const originalPadding = target.style.padding;
-target.style.padding = _S[433];
-const iframes = target.querySelectorAll(_S[434]);
+target.style.padding = _S[463];
+const iframes = target.querySelectorAll(_S[464]);
 const iframeReplacements = [];
 const inlineSvgReplacements = [];
 iframes.forEach(iframe => {
 try {
 const svgDoc = iframe.contentDocument || iframe.contentWindow.document;
-const svgElement = svgDoc.querySelector(_S[435]);
+const svgElement = svgDoc.querySelector(_S[465]);
 if (svgElement) {
-const width = iframe.style.width || _S[436];
-const height = iframe.style.height || _S[437];
+const width = iframe.style.width || _S[466];
+const height = iframe.style.height || _S[467];
 const svgString = new XMLSerializer().serializeToString(svgElement);
 const encodedData = btoa(unescape(encodeURIComponent(svgString)));
-const img = document.createElement(_S[438]);
-img.src = _S[439] + encodedData;
+const img = document.createElement(_S[468]);
+img.src = _S[469] + encodedData;
 img.style.width = width;
 img.style.height = height;
-img.style.display = _S[440];
-img.style.margin = _S[441];
+img.style.display = _S[470];
+img.style.margin = _S[471];
 const parent = iframe.parentNode;
 const originalOverflow = parent.style.overflowX;
-parent.style.overflowX = _S[442];
+parent.style.overflowX = _S[472];
 parent.insertBefore(img, iframe);
-iframe.style.display = _S[443];
+iframe.style.display = _S[473];
 iframeReplacements.push({
 iframe: iframe,
 img: img,
@@ -1567,45 +1649,45 @@ originalOverflow: originalOverflow
 });
 }
 } catch (e) {
-console.warn(_S[444], e);
+console.warn(_S[474], e);
 }
 });
-target.querySelectorAll(_S[445]).forEach(svgElement => {
+target.querySelectorAll(_S[475]).forEach(svgElement => {
 try {
 const rect = svgElement.getBoundingClientRect();
-const width = rect.width || parseFloat(svgElement.getAttribute(_S[446])) || 300;
-const height = rect.height || parseFloat(svgElement.getAttribute(_S[447])) || 200;
+const width = rect.width || parseFloat(svgElement.getAttribute(_S[476])) || 300;
+const height = rect.height || parseFloat(svgElement.getAttribute(_S[477])) || 200;
 const svgClone = svgElement.cloneNode(true);
-svgClone.setAttribute(_S[448], _S[449]);
-svgClone.setAttribute(_S[450], width);
-svgClone.setAttribute(_S[451], height);
-svgClone.style.position = _S[452];
-svgClone.style.display = _S[453];
-svgClone.style.margin = _S[454];
+svgClone.setAttribute(_S[478], _S[479]);
+svgClone.setAttribute(_S[480], width);
+svgClone.setAttribute(_S[481], height);
+svgClone.style.position = _S[482];
+svgClone.style.display = _S[483];
+svgClone.style.margin = _S[484];
 const svgString = new XMLSerializer().serializeToString(svgClone);
 const encodedData = btoa(unescape(encodeURIComponent(svgString)));
-const img = document.createElement(_S[455]);
-img.src = _S[456] + encodedData;
-img.style.width = width + _S[457];
-img.style.height = height + _S[458];
-img.style.display = _S[459];
-img.style.margin = _S[460];
+const img = document.createElement(_S[485]);
+img.src = _S[486] + encodedData;
+img.style.width = width + _S[487];
+img.style.height = height + _S[488];
+img.style.display = _S[489];
+img.style.margin = _S[490];
 svgElement.parentNode.insertBefore(img, svgElement);
-svgElement.style.display = _S[461];
+svgElement.style.display = _S[491];
 inlineSvgReplacements.push({
 svg: svgElement,
 img: img
 });
 } catch (e) {
-console.warn(_S[462], e);
+console.warn(_S[492], e);
 }
 });
 const originalWidth = target.style.width;
 const originalMaxWidth = target.style.maxWidth;
-const isSplit = target.querySelector(_S[463]) !== null;
+const isSplit = target.querySelector(_S[493]) !== null;
 if (isSplit) {
-target.style.width = _S[464];
-target.style.maxWidth = _S[465];
+target.style.width = _S[494];
+target.style.maxWidth = _S[495];
 }
 html2canvas(target, {
 useCORS: true,
@@ -1620,18 +1702,18 @@ target.style.maxWidth = originalMaxWidth;
 }
 iframeReplacements.forEach(replacement => {
 replacement.img.remove();
-replacement.iframe.style.display = _S[466];
+replacement.iframe.style.display = _S[496];
 replacement.parent.style.overflowX = replacement.originalOverflow;
 });
 inlineSvgReplacements.forEach(replacement => {
 replacement.img.remove();
-replacement.svg.style.display = _S[467];
+replacement.svg.style.display = _S[497];
 });
 target.style.background = originalBg;
 target.style.padding = originalPadding;
-const link = document.createElement(_S[468]);
+const link = document.createElement(_S[498]);
 link.download = `clear_maker_response_${Date.now()}.png`;
-link.href = canvas.toDataURL(_S[469]);
+link.href = canvas.toDataURL(_S[499]);
 link.click();
 }).catch(err => {
 if (isSplit) {
@@ -1640,29 +1722,29 @@ target.style.maxWidth = originalMaxWidth;
 }
 iframeReplacements.forEach(replacement => {
 replacement.img.remove();
-replacement.iframe.style.display = _S[470];
+replacement.iframe.style.display = _S[500];
 replacement.parent.style.overflowX = replacement.originalOverflow;
 });
 inlineSvgReplacements.forEach(replacement => {
 replacement.img.remove();
-replacement.svg.style.display = _S[471];
+replacement.svg.style.display = _S[501];
 });
 console.error(err);
 target.style.background = originalBg;
 target.style.padding = originalPadding;
-alert(_S[472]);
+alert(_S[502]);
 });
 }
 function openTexSauceMaker() {
 const target = _e.responseArea;
 const originalBg = target.style.background;
-const dataTheme = document.body.getAttribute(_S[473]);
-const bgHex = dataTheme === _S[474] ? _S[475] : _S[476];
-const captureBg = dataTheme === _S[477] ? _S[478] : _S[479];
+const dataTheme = document.body.getAttribute(_S[503]);
+const bgHex = dataTheme === _S[504] ? _S[505] : _S[506];
+const captureBg = dataTheme === _S[507] ? _S[508] : _S[509];
 target.style.background = bgHex;
 const originalPadding = target.style.padding;
-target.style.padding = _S[480];
-const iframes = target.querySelectorAll(_S[481]);
+target.style.padding = _S[510];
+const iframes = target.querySelectorAll(_S[511]);
 const iframeReplacements = [];
 let extractedTikZ = [];
 if (window.tikzBlocks && window.tikzBlocks.length > 0) {
@@ -1672,23 +1754,23 @@ extractedTikZ = [...window.tikzBlocks];
 iframes.forEach(iframe => {
 try {
 const svgDoc = iframe.contentDocument || iframe.contentWindow.document;
-const svgElement = svgDoc.querySelector(_S[482]);
+const svgElement = svgDoc.querySelector(_S[512]);
 if (svgElement) {
-const width = iframe.style.width || _S[483];
-const height = iframe.style.height || _S[484];
+const width = iframe.style.width || _S[513];
+const height = iframe.style.height || _S[514];
 const svgString = new XMLSerializer().serializeToString(svgElement);
 const encodedData = btoa(unescape(encodeURIComponent(svgString)));
-const img = document.createElement(_S[485]);
-img.src = _S[486] + encodedData;
+const img = document.createElement(_S[515]);
+img.src = _S[516] + encodedData;
 img.style.width = width;
 img.style.height = height;
-img.style.display = _S[487];
-img.style.margin = _S[488];
+img.style.display = _S[517];
+img.style.margin = _S[518];
 const parent = iframe.parentNode;
 const originalOverflow = parent.style.overflowX;
-parent.style.overflowX = _S[489];
+parent.style.overflowX = _S[519];
 parent.insertBefore(img, iframe);
-iframe.style.display = _S[490];
+iframe.style.display = _S[520];
 iframeReplacements.push({
 iframe: iframe,
 img: img,
@@ -1697,7 +1779,7 @@ originalOverflow: originalOverflow
 });
 }
 } catch (e) {
-console.warn(_S[491], e);
+console.warn(_S[521], e);
 }
 });
 html2canvas(target, {
@@ -1708,71 +1790,71 @@ logging: false
 }).then(canvas => {
 iframeReplacements.forEach(replacement => {
 replacement.img.remove();
-replacement.iframe.style.display = _S[492];
+replacement.iframe.style.display = _S[522];
 replacement.parent.style.overflowX = replacement.originalOverflow;
 });
 target.style.background = originalBg;
 target.style.padding = originalPadding;
-const dataUrl = canvas.toDataURL(_S[493]);
-const texWindow = window.open(TEX_SAUCE_MAKER_URL, _S[494]);
+const dataUrl = canvas.toDataURL(_S[523]);
+const texWindow = window.open(TEX_SAUCE_MAKER_URL, _S[524]);
 if (!texWindow) {
-alert(_S[495]);
+alert(_S[525]);
 return;
 }
 const messageHandler = (event) => {
-if (event.data && event.data.type === _S[496]) {
-window.removeEventListener(_S[497], messageHandler);
+if (event.data && event.data.type === _S[526]) {
+window.removeEventListener(_S[527], messageHandler);
 texWindow.postMessage({
-type: _S[498],
+type: _S[528],
 imageDataUrl: dataUrl,
-mimeType: _S[499],
+mimeType: _S[529],
 tikzCodeArray: extractedTikZ
-}, _S[500]);
-console.log(_S[501]);
+}, _S[530]);
+console.log(_S[531]);
 }
 };
-window.addEventListener(_S[502], messageHandler);
+window.addEventListener(_S[532], messageHandler);
 setTimeout(() => {
-window.removeEventListener(_S[503], messageHandler);
+window.removeEventListener(_S[533], messageHandler);
 }, 30000);
 }).catch(err => {
 iframeReplacements.forEach(replacement => {
 replacement.img.remove();
-replacement.iframe.style.display = _S[504];
+replacement.iframe.style.display = _S[534];
 replacement.parent.style.overflowX = replacement.originalOverflow;
 });
 console.error(err);
 target.style.background = originalBg;
 target.style.padding = originalPadding;
-alert(_S[505]);
+alert(_S[535]);
 });
 }
 function _fT(isEditing) {
 if (isEditing) {
-_e.responseArea.classList.add(_S[506]);
-_e.responseEditor.classList.remove(_S[507]);
-_e.responseEditor.value = _s.currentMarkdown || _S[508];
-_e.editBtn.classList.add(_S[509]);
-_e.copyBtn.classList.add(_S[510]);
-_e.screenshotBtn.classList.add(_S[511]);
-_e.editActions.classList.remove(_S[512]);
+_e.responseArea.classList.add(_S[536]);
+_e.responseEditor.classList.remove(_S[537]);
+_e.responseEditor.value = _s.currentMarkdown || _S[538];
+_e.editBtn.classList.add(_S[539]);
+_e.copyBtn.classList.add(_S[540]);
+_e.screenshotBtn.classList.add(_S[541]);
+_e.editActions.classList.remove(_S[542]);
 } else {
-_e.responseArea.classList.remove(_S[513]);
-_e.responseEditor.classList.add(_S[514]);
-_e.editBtn.classList.remove(_S[515]);
-_e.copyBtn.classList.remove(_S[516]);
-_e.screenshotBtn.classList.remove(_S[517]);
-_e.editActions.classList.add(_S[518]);
+_e.responseArea.classList.remove(_S[543]);
+_e.responseEditor.classList.add(_S[544]);
+_e.editBtn.classList.remove(_S[545]);
+_e.copyBtn.classList.remove(_S[546]);
+_e.screenshotBtn.classList.remove(_S[547]);
+_e.editActions.classList.add(_S[548]);
 }
 }
 function hasTikZBlock(markdown) {
-return /\\begin\{tikzpicture\}[\s\S]*?\\end\{tikzpicture\}/.test(markdown || _S[519]);
+return /\\begin\{tikzpicture\}[\s\S]*?\\end\{tikzpicture\}/.test(markdown || _S[549]);
 }
 function extractTikZBlocks(markdown) {
 const blocks = [];
 const regex = /(?:```(?:tikz|latex)\s*\n)?(\\begin\{tikzpicture\}[\s\S]*?\\end\{tikzpicture\})(?:\n*```)?/g;
 let match;
-while ((match = regex.exec(markdown || _S[520])) !== null) {
+while ((match = regex.exec(markdown || _S[550])) !== null) {
 blocks.push(match[1]);
 }
 return blocks;
@@ -1808,32 +1890,32 @@ _fN(_s.currentMarkdown, getIncludedResponseImages());
 });
 }
 async function _fW() {
-const modal = document.getElementById(_S[521]);
-const content = document.getElementById(_S[522]);
+const modal = document.getElementById(_S[551]);
+const content = document.getElementById(_S[552]);
 _fD(_e.settingsModal, false);
 _fD(modal, true);
-content.innerHTML = _S[523];
+content.innerHTML = _S[553];
 try {
-console.log(_S[524]);
+console.log(_S[554]);
 const text = README_CONTENT;
-if (typeof marked === _S[525]) {
-throw new Error(_S[526]);
+if (typeof marked === _S[555]) {
+throw new Error(_S[556]);
 }
 const html = marked.parse(text);
 content.innerHTML = html;
 } catch (err) {
-console.error(_S[527], err);
+console.error(_S[557], err);
 content.innerHTML = `<p style="color:red">読み込みに失敗しました。<br>${err.message}</p>`;
 }
 }
 async function callGAS(payload) {
 const response = await fetch(GAS_API_URL, {
-method: _S[528],
-headers: { [_S[529]]: _S[530] },
+method: _S[558],
+headers: { [_S[559]]: _S[560] },
 body: JSON.stringify(payload)
 }).catch(err => {
-if (err.message && err.message.includes(_S[531])) {
-throw new Error(_S[532]);
+if (err.message && err.message.includes(_S[561])) {
+throw new Error(_S[562]);
 }
 throw err;
 });
@@ -1841,8 +1923,8 @@ let data;
 try {
 data = await response.json();
 } catch (jsonErr) {
-console.error(_S[533], jsonErr);
-throw new Error(_S[534]);
+console.error(_S[563], jsonErr);
+throw new Error(_S[564]);
 }
 if (data.error) {
 throw new Error(data.error);
@@ -1860,16 +1942,16 @@ return null;
 }
 function stripConfidenceText(text) {
 if (!_e.showConfidenceCheck.checked) {
-text = text.replace(/\n*.*確信度.*\n*/g, _S[535]);
+text = text.replace(/\n*.*確信度.*\n*/g, _S[565]);
 text = text.trimEnd();
 }
 return text;
 }
 function resetVerifyUI() {
 if (!_e.verifyContainer) return;
-_e.verifyContainer.classList.add(_S[536]);
-_e.verifyBadge.classList.add(_S[537]);
-_e.verifyWarning.classList.add(_S[538]);
+_e.verifyContainer.classList.add(_S[566]);
+_e.verifyBadge.classList.add(_S[567]);
+_e.verifyWarning.classList.add(_S[568]);
 if (_e.altResponseBtn) {
 const oldBtn = _e.altResponseBtn;
 const newBtn = oldBtn.cloneNode(true);
@@ -1879,30 +1961,30 @@ _e.altResponseBtn = newBtn;
 }
 function showVerifyUI(result, altText, altConfidence, allImages) {
 if (!_e.verifyContainer) return;
-_e.verifyContainer.classList.remove(_S[539]);
-if (result === _S[540]) {
-_e.verifyBadge.classList.remove(_S[541]);
-_e.verifyWarning.classList.add(_S[542]);
+_e.verifyContainer.classList.remove(_S[569]);
+if (result === _S[570]) {
+_e.verifyBadge.classList.remove(_S[571]);
+_e.verifyWarning.classList.add(_S[572]);
 } else {
-_e.verifyBadge.classList.add(_S[543]);
-_e.verifyWarning.classList.remove(_S[544]);
-const span = _e.verifyWarning.querySelector(_S[545]);
-if (result === _S[546]) {
-span.textContent = _S[547];
+_e.verifyBadge.classList.add(_S[573]);
+_e.verifyWarning.classList.remove(_S[574]);
+const span = _e.verifyWarning.querySelector(_S[575]);
+if (result === _S[576]) {
+span.textContent = _S[577];
 } else {
-span.textContent = _S[548];
+span.textContent = _S[578];
 }
 let showingAlt = false;
 const currentMarkdownBackup = _s.currentMarkdown;
-_e.altResponseBtn.addEventListener(_S[549], () => {
+_e.altResponseBtn.addEventListener(_S[579], () => {
 showingAlt = !showingAlt;
 if (showingAlt) {
 const altDisplay = stripConfidenceText(_fW5(altText).displayText);
 _fN(altDisplay, allImages);
-_e.altResponseBtn.textContent = _S[550];
+_e.altResponseBtn.textContent = _S[580];
 } else {
 _fN(currentMarkdownBackup, allImages);
-_e.altResponseBtn.textContent = _S[551];
+_e.altResponseBtn.textContent = _S[581];
 }
 });
 }
@@ -1910,8 +1992,8 @@ _e.altResponseBtn.textContent = _S[551];
 function compareAnswers(text1, text2) {
 const answer1 = extractFinalAnswer(text1);
 const answer2 = extractFinalAnswer(text2);
-if (!answer1 || !answer2) return _S[552];
-return normalizeAnswer(answer1) === normalizeAnswer(answer2) ? _S[553] : _S[554];
+if (!answer1 || !answer2) return _S[582];
+return normalizeAnswer(answer1) === normalizeAnswer(answer2) ? _S[583] : _S[584];
 }
 function extractFinalAnswer(text) {
 const bmMatches = [...text.matchAll(/\$\\bm\{([^}]+)\}\$/g)];
@@ -1935,18 +2017,18 @@ return null;
 }
 function normalizeAnswer(answer) {
 return answer
-.replace(/\\bm\{/g, _S[555])
-.replace(/\\boldsymbol\{/g, _S[556])
-.replace(/\\mathrm\{/g, _S[557])
-.replace(/\\text\{/g, _S[558])
-.replace(/[{}]/g, _S[559])
-.replace(/\\,/g, _S[560])
-.replace(/\\;/g, _S[561])
-.replace(/\\!/g, _S[562])
-.replace(/\\quad/g, _S[563])
-.replace(/\\qquad/g, _S[564])
-.replace(/\$/g, _S[565])
-.replace(/\s+/g, _S[566])
+.replace(/\\bm\{/g, _S[585])
+.replace(/\\boldsymbol\{/g, _S[586])
+.replace(/\\mathrm\{/g, _S[587])
+.replace(/\\text\{/g, _S[588])
+.replace(/[{}]/g, _S[589])
+.replace(/\\,/g, _S[590])
+.replace(/\\;/g, _S[591])
+.replace(/\\!/g, _S[592])
+.replace(/\\quad/g, _S[593])
+.replace(/\\qquad/g, _S[594])
+.replace(/\$/g, _S[595])
+.replace(/\s+/g, _S[596])
 .trim();
 }
 _f1();})();
