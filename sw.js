@@ -1,4 +1,4 @@
-const APP_VERSION = '3.1.7';
+const APP_VERSION = '3.1.8';
 const CACHE_NAME = `clear-maker3-cache-v${APP_VERSION}`;
 
 const LOCAL_ASSETS = [

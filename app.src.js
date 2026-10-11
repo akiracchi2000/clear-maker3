@@ -31,6 +31,10 @@ Clear Maker 3は、Google Gemini Proモデルを活用して、生徒の答案�
 
 ## 更新履歴 (Changelog)
 
+### v3.1.8 (2026-10-12)
+*   **[修正] 丸数字の表示を改善**:
+    *   回答本文と添削画像内コメントで、丸数字を囲むLaTeXのtext命令を取り除き、①〜⑳をそのまま表示するようにしました。
+
 ### v3.1.7 (2026-09-21)
 *   **[改善] 添削画像内コメントのKaTeX表示に対応**:
     *   AI生成コメントの \`$...$\` で囲まれた数式をKaTeXで描画し、答案画像へ高精細に合成するようにしました。
@@ -460,7 +464,7 @@ function init() {
     setupEventListeners();
     // Update version tag on load
     if (elements.versionTag) {
-        elements.versionTag.textContent = 'v3.1.7';
+        elements.versionTag.textContent = 'v3.1.8';
     }
 }
 
@@ -1314,7 +1318,12 @@ async function sendToGAS(markdown, questionText = "", confidenceScore = null, an
     }
 }
 
+function normalizeCircledNumbers(text) {
+    return String(text || '').replace(/\\text\s*\{\s*([①-⑳])\s*\}/g, '$1');
+}
+
 function renderOutput(markdown, imageParts = null) {
+    markdown = normalizeCircledNumbers(markdown);
     // Placeholder strategy:
     // 1. Extract all TikZ blocks and replace with placeholders
     // 2. Extract all Math blocks and replace with placeholders
@@ -1633,6 +1642,7 @@ function markerDescriptionHasMath(text) {
 }
 
 async function renderMarkerMathDescription(description, fontSize) {
+    description = normalizeCircledNumbers(description);
     if (!markerDescriptionHasMath(description) || !window.renderMathInElement || !window.html2canvas) {
         return null;
     }
@@ -1717,7 +1727,7 @@ function drawMarkersOnImage(imgEl, markers) {
             const themeColor = isCheck ? '#059669' : '#dc2626'; // Emerald green or Rose red
             const lightColor = isCheck ? '#ecfdf5' : '#fef2f2';
             const badgeTag = isCheck ? (marker.point ? `P${marker.point} ◎` : 'GOOD') : (marker.point ? `P${marker.point}` : 'FIX');
-            const desc = marker.description || '';
+            const desc = normalizeCircledNumbers(marker.description);
 
             // Dynamic font sizing based on image resolution (ensure comfortable readability)
             const scale = Math.max(1.3, canvas.width / 750);
